@@ -26,7 +26,7 @@ The goal of this document is to offer you an easy and quick way to get started w
 
 ## What is the Spring framework?
 
-Spring is a modular system, allowing you to pick and choose which modules are applicable to you when building your applications, without having to bring in the rest. The following section provides details about all the modules available in Spring Framework.
+Spring is a modular system, allowing you to pick and choose which modules are applicable to you when building your applications, without having to bring in the rest. The following image provides details about all the modules available in Spring Framework.
 
 ![Spring Framework Overview](https://github.com/tvanwinckel/intro-spring-core/blob/main/images/SpringFrameworkOverview.png?raw=true "Spring Framework Overview")
 
@@ -53,7 +53,7 @@ The Data Access/Integration layer consists of the JDBC, ORM, OXM, JMS and Transa
 
 The Web layer consists of the Web, Web-MVC, Web-Socket, and Web-Portlet modules:
 
-* The **Web** module provides basic web-oriented integration features such as multipart file-upload functionality and the initialization of the IoC container using servlet lis 
+* The **Web** module provides basic web-oriented integration features such as multipart file-upload functionality and the initialization of the IoC container using servlets 
 * The **Web-MVC** module contains Spring's Model-View-Controller (MVC) implementation for web applications.
 * The **Web-Socket** module provides support for WebSocket-based, two-way communication between the client and the server in web applications.
 * The **Web-Portlet** module provides the MVC implementation to be used in a portlet environment and mirrors the functionality of Web-Servlet module.
@@ -136,7 +136,7 @@ public class GhostJar {
 
 An IoC container is a common characteristic of frameworks that implement IoC. In the Spring framework, the interface ``ApplicationContext`` represents the IoC container. The Spring container is responsible for instantiating, configuring and assembling objects known as beans, as well as managing their life cycles. 
 
-The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata. The configuration metadata is represented in XML, Java annotations, or Java code. It lets you express the objects that compose your application and the dependencies between those objects.
+The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata. The configuration **metadata is represented in XML, Java annotations, or Java code**. It lets you express the objects that compose your application and the dependencies between those objects.
 
 The following diagram shows a high-level view of how Spring works. Your application classes are combined with configuration metadata so that, after the ApplicationContext is created and initialized, you have a fully configured and executable system or application.
 
@@ -163,14 +163,14 @@ public class GhostConfig {
 
 ---
 
-### Spilling the Beans?
+### Spilling the Beans!
 
 In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container. **A Spring IoC container manages one or more beans**. These beans are created with the configuration metadata that you supply to the container. Within the container itself, these bean definitions are represented as BeanDefinition objects, which contain (among other information) the following metadata:
 
 * A package-qualified class name: typically, the actual implementation class of the bean being defined.
 * Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth).
 * References to other beans that are needed for the bean to do its work. These references are also called collaborators or dependencies. 
-* Other configuration settings to set in the newly created object — for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.
+* Other configuration settings to set in the newly created object. For example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.
 
 #### Naming Beans
 
@@ -337,7 +337,7 @@ public class Agency implements DisposableBean {
 
  ### Bean Annotations
 
- In this chapter, we will discuss the most common Spring bean annotations used to define different types of beans. There are several ways to configure beans in a Spring container. Firstly, we can declare them using XML configuration. But we can also declare beans using the ``@Bean annotation in a configuration class``.
+ In this chapter, we will discuss the most common Spring bean annotations used to define different types of beans. There are several ways to configure beans in a Spring container. Firstly, we can declare them using XML configuration. But we can also declare beans using the ``@Bean`` annotation in a configuration class.
 
 Finally, we can mark the class with one of the annotations from the ``org.springframework.stereotype package``, and leave the rest to ``component scanning``.
 
@@ -425,7 +425,7 @@ public class GhostController {
 
 #### @Configuration
 
-``Configuration classes`` can contain bean definition methods annotated with ``@Bean``:
+``@Configuration`` classes can contain bean definition methods annotated with ``@Bean``:
 
 ```java
 @Configuration
