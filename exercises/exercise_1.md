@@ -56,34 +56,8 @@ Create a GhostService that accepts a list of Ghosts. Enable the service to retur
 Now instead of creating a ghost object to put into a ghost jar, use the service to fetch a certain ghost.
 
 
-**Solution**
+---
 
-```java
-public record StorageRoom(List<Artefact> artefacts) {
+* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solution/solution_1.md)**
 
-    public List<GhostJar> getAllGhostJars() {
-        return artefacts.stream()
-                .filter(artefact -> artefact instanceof GhostJar)
-                .map(artefact -> (GhostJar) artefact)
-                .toList();
-    }
-
-    public static void main(String[] args) {
-        final Ghost poltergeist = new Ghost(2, "Poltergeist");
-        final GhostJar jar = new GhostJar(poltergeist);
-
-        System.out.println("Contains ghost of type: " + jar.containsGhostType());
-        System.out.println("Contains ghost: " + jar.containsGhostWithName());
-
-
-        final RandomArtefact silverLocket = new RandomArtefact("Silver locket");
-        final RandomArtefact pirateHand = new RandomArtefact("Old severed pirate hand");
-
-        List<Artefact> artefacts = List.of(jar, silverLocket, pirateHand);
-        final StorageRoom storageRoom = new StorageRoom(artefacts);
-
-        System.out.println(storageRoom.getAllGhostJars());
-        System.out.println(storageRoom.artefacts());
-    }
-}
-```
+---
