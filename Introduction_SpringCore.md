@@ -9,24 +9,18 @@ The goal of this document is to offer you an easy and quick way to get started w
 **TODO - Check subtitles**
 
 * What is the Spring framework?
-* Spring Core, the basics
-  * Why Spring?
+* Spring Core
   * Inversion of control
   * Dependency Injection
   * Spring IOC container overview
-  * Beans, what are they and what do they do?
+  * Spilling the Beans
   * Bean scopes
-    * Bean lifecycle
-    * Inheritance
+  * Bean lifecycle
   * Bean annotations
-  * @Autowired
-    * Wiring of beans
-    * Qualifier
-  * Components, services repositories
-* Extras
-  * (optional): Properties and injecting them @Value
-  * (Optional) Profiles 
-  * (Optional) Scheduled tasks
+  * Autowired
+  * Properties
+  * Profiles 
+  * Scheduled tasks
 
 ---
 
@@ -108,7 +102,9 @@ The advantages of this architecture are:
 
 We can achieve Inversion of Control through various mechanisms such as: Strategy design pattern, Service Locator pattern, Factory pattern, and **Dependency Injection (DI).**
 
-**TODO Add some articles to the other methods like service locator?**
+
+* [Service Locator Pattern](https://www.baeldung.com/java-service-locator-pattern)
+* [Factory Pattern](https://www.javatpoint.com/factory-method-design-pattern#:~:text=A%20Factory%20Pattern%20or%20Factory,the%20instance%20of%20the%20class.)
 
 ### Dependency Injection
 
@@ -161,10 +157,13 @@ public class GhostConfig {
     }
 }
 ```
+---
+
+* **[Exercise 1](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/exercise_1.md)**
+
+---
 
 ### Spilling the Beans?
-
-https://www.baeldung.com/spring-bean
 
 In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container. **A Spring IoC container manages one or more beans**. These beans are created with the configuration metadata that you supply to the container. Within the container itself, these bean definitions are represented as BeanDefinition objects, which contain (among other information) the following metadata:
 
@@ -253,7 +252,7 @@ public Ghost ghost() {
 
 #### Request, Session, Application & Websocket
 
-The Request, Session, Application & Websocket copes are available only if you use a web-aware Spring ApplicationContext.
+The Request, Session, Application & Websocket scopes are available only if you use a web-aware Spring ApplicationContext.
 
 **Request**
 
@@ -328,6 +327,13 @@ public class Agency implements DisposableBean {
     }
 }
  ```
+
+ ---
+
+ * **[Exercise 2](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/exercise_2.md)**
+ * **[Exercise 3](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/exercise_3.md)**
+
+ ---
 
  ### Bean Annotations
 
@@ -686,6 +692,7 @@ public class AgencyService {
 
 When there are multiple beans of the same type, it's a good idea to use @Qualifier to avoid ambiguity. Please note that the value of the @Qualifier annotation matches with the name declared in the @Component annotation of our Agency implementation.
 
+
 ### Properties
 
 Spring 3.1 also introduces the new ``@PropertySource`` annotation as a convenient mechanism for adding property sources to the environment. We can use this annotation in conjunction with the ``@Configuration`` annotation:
@@ -785,6 +792,12 @@ We can also configure a different file at runtime if we need to, using an enviro
 java -jar app.jar --spring.config.location=classpath:/another-location.properties
 ```
 
+---
+
+* **[Exercise 4](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/exercise_4.md)**
+
+---
+
 ### Profiles
 
 Profiles are a core feature of the framework, allowing us to map our beans to different profiles. For example, dev, test, and prod. We can then activate different profiles in different environments to bootstrap only the beans we need.
@@ -838,6 +851,12 @@ Spring Boot supports all the profile configurations outlined so far, but makes i
 ```txt
 spring.profiles.active=dev
 ```
+
+---
+
+* **[Exercise 5](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/exercise_5.md)**
+
+---
 
 ### Scheduled tasks
 
@@ -932,9 +951,11 @@ Note that in this example, we're scheduling a task to be executed at 10:15 AM on
 
 ---
 
+* **[Exercise 6](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/exercise_6.md)**
+
+---
+
 ## Sources and Information
 
-**TODO**
-
-* [Spring Documentation](https://spring.getdocs.org/en-US/spring-framework-docs/docs/spring-web/spring-web.html)
-* 
+* [Official Spring Documentation](https://spring.io/projects/spring-framework)
+* [Spring Overview](https://www.tutorialspoint.com/spring/spring_architecture.htm)
