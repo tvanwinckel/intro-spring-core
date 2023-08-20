@@ -43,6 +43,6 @@ test {
 
 ---
 
-* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solution/solution_2.md)**
+* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solutions/solution_2.md)**
 
 ---

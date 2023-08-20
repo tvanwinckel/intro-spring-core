@@ -50,6 +50,6 @@ public interface LocationRepository {
 
 ---
 
-* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solution/solution_6.md)**
+* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solutions/solution_6.md)**
 
 ---

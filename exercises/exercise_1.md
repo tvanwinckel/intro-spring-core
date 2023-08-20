@@ -58,6 +58,6 @@ Now instead of creating a ghost object to put into a ghost jar, use the service 
 
 ---
 
-* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solution/solution_1.md)**
+* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solutions/solution_1.md)**
 
 ---

@@ -22,6 +22,6 @@ Use one of your existing classes, or create a new class and have its fields popu
 
 ---
 
-* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solution/solution_4.md)**
+* **[Solution](https://github.com/tvanwinckel/intro-spring-core/blob/main/exercises/solutions/solution_4.md)**
 
 ---
