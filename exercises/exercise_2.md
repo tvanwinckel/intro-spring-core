@@ -24,14 +24,17 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-core:5.2.19.RELEASE'
-    implementation 'org.springframework:spring-context:5.2.21.RELEASE'
-    implementation 'org.springframework:spring-beans:5.2.22.RELEASE'
+    implementation 'org.springframework:spring-core:6.0.11'
+    implementation 'org.springframework:spring-context:6.0.11'
+    implementation 'org.springframework:spring-beans:6.0.11'
+
     implementation 'joda-time:joda-time:2.10'
 
     testImplementation 'junit:junit:4.13.1'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.6.1'
 
-    implementation('org.springframework:spring-context:5.2.21.RELEASE') {
+
+    implementation('org.springframework:spring-context:6.0.11') {
         exclude group: 'spring.framework', module: 'commons-logging'
     }
 }
